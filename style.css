@@ -1,0 +1,73 @@
+body {
+    font-family: "Montserrat", sans-serif!important;
+}
+
+.row-card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.form-generator {
+    background: #eef1f5;
+    padding: 120px 80px;
+    flex: 1;
+}
+
+.preview-card {
+    background: #23548a;
+    padding: 120px 80px;
+    flex: 1;
+}
+
+.title h2 small {
+    display: block;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.title h2 {
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.form-generator .title h2 {
+    color: #23548a;
+}
+
+.preview-card .title h2 {
+    color: #eef1f5;
+}
+
+.new-card {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1rem 0.8rem -0.5rem rgba(63, 137, 255, .2);
+    margin: 0 auto;
+    width: 320px;
+    height: 220px;
+}
+
+label.form-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #a8b7c3;
+}
+
+.form-control {
+    line-height: 2;
+}
+
+.form-control::placeholder,
+input[type=date]::-webkit-datetime-edit {
+    font-weight: 300;
+    font-size: 12px;
+    color: #a8b7c3;
+}
+
+input[type=date]::-webkit-datetime-edit {
+    text-transform: uppercase;
+}
