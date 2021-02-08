@@ -71,3 +71,21 @@ input[type=date]::-webkit-datetime-edit {
 input[type=date]::-webkit-datetime-edit {
     text-transform: uppercase;
 }
+
+
+/*CSS para impressão*/
+
+@media print {
+    .form-generator,
+    .title,
+    .preview-card button {
+        display: none!important;
+    }
+    .new-card {
+        border: 1px solid #CCC;
+        box-shadow: none;
+        position: absolute;
+        top: 3%;
+        left: 3%;
+    }
+}

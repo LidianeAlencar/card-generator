@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500,600,700,800&amp;display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
 
     <title>Card Generator - GLMMB</title>
 </head>
@@ -25,7 +25,7 @@
                 </h2>
             </div>
 
-            <form id="formGenerator" onsubmit="formGenerator()">
+            <form id="formGenerator" onsubmit="return formGenerator()">
 
                 <div class="row">
                     <div class="mb-3 col">
@@ -42,29 +42,29 @@
 
                     <div class="mb-3 col">
                         <label for="birthday" class="form-label">Nascimento</label>
-                        <input type="date" class="form-control" id="birthday" aria-label="birthday">
+                        <input type="text" class="form-control" id="birthday" aria-label="birthday" placeholder="DD/MM/AAAA" data-mask="00/00/0000">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="initial" class="form-label">Iniciação</label>
-                        <input type="date" class="form-control" id="initial" aria-label="Iniciação">
+                        <input type="text" class="form-control" id="initial" aria-label="Iniciação" placeholder="DD/MM/AAAA" data-mask="00/00/0000">
                     </div>
                     <div class="mb-3 col">
                         <label for="placet" class="form-label">Placet</label>
-                        <input type="text" class="form-control" id="placet" placeholder="Placet" aria-label="Placet">
+                        <input type="text" class="form-control" id="placet" placeholder="Placet" aria-label="Placet" data-mask="0000">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="rg" class="form-label">RG</label>
-                        <input type="text" class="form-control " id="rg" placeholder="RG" aria-label="RG">
+                        <input type="text" class="form-control " id="rg" placeholder="RG" aria-label="RG" data-mask="00.000.000-A">
                     </div>
                     <div class="mb-3 col">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="CPF" aria-label="CPF">
+                        <input type="text" class="form-control" id="cpf" placeholder="CPF" aria-label="CPF" data-mask="000.000.000-00">
                     </div>
                 </div>
 
@@ -96,19 +96,28 @@
 
 
             <div class="new-card">
-                Hello Darkness
+                <div class="card-header">
+                    <div id="txt-person-name">teste</div>
+                </div>
+                <div class="card-body">
+
+                </div>
+                <div class="card-footer">
+
+                </div>
+
             </div>
 
-            <button type="submit" class="btn btn-lg btn-light">Imprimir</button>
+            <button type="button" class="btn btn-lg btn-light" onclick="print()">Imprimir</button>
 
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
 </body>
 
 </html>
