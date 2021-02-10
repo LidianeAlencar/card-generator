@@ -27,6 +27,7 @@ function formGenerator(e) {
         console.log()
 
         return false;
+
     } else {
         console.log('info');
         return false
